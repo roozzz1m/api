@@ -1,5 +1,5 @@
 import { NextResponse, NextRequest } from "next/server";
-import { sunoApi } from "@/lib/SunoApi";
+import { newSunoApi } from '@/lib/SunoApi'
 import { corsHeaders } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
@@ -7,6 +7,7 @@ export const dynamic = "force-dynamic";
 export async function POST(req: NextRequest) {
   if (req.method === 'POST') {
     try {
+      const suno = await newSunoApi()
       const body = await req.json();
       const { prompt } = body;
 
@@ -20,7 +21,7 @@ export async function POST(req: NextRequest) {
         });
       }
 
-      const lyrics = await (await sunoApi).generateLyrics(prompt);
+      const lyrics = await (await suno).generateLyrics(prompt);
 
       return new NextResponse(JSON.stringify(lyrics), {
         status: 200,
