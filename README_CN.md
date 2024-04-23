@@ -2,15 +2,16 @@
   <h1 align="center"">
       Suno AI API
   </h1>
-  <p>Use API to call the music generation AI of Suno.ai and easily integrate it into agents like GPTs.</p>
-  <p>👉 We update quickly, please star.</p>
+  <p>用 API 调用 suno.ai 的音乐生成 AI，并且可以轻松集成到 GPTs 等 agent 中。</p>
+  <p>👉 我们更新很快，欢迎 star。</p>
 </div>
 <p align="center">
   <a target="_blank" href="./README.md">English</a> 
   | <a target="_blank" href="./README_CN.md">简体中文</a> 
   | <a target="_blank" href="https://suno.gcui.art">Demo</a> 
-  | <a target="_blank" href="https://suno.gcui.art/docs">Docs</a> 
-  | <a target="_blank" href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgcui-art%2Fsuno-api&env=SUNO_COOKIE&project-name=suno-api&repository-name=suno-api">Deploy with Vercel</a> 
+  | <a target="_blank" href="https://suno.gcui.art/docs">文档</a> 
+  | <a target="_blank" href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgcui-art%2Fsuno-api&env=SUNO_COOKIE&project-name=suno-api&repository-name=suno-api">一键部署到 Vercel</a> 
+  
 </p>
 <p align="center">
   <a href="https://www.producthunt.com/products/gcui-art-suno-api-open-source-sunoai-api/reviews?utm_source=badge-product_review&utm_medium=badge&utm_souce=badge-gcui&#0045;art&#0045;suno&#0045;api&#0045;open&#0045;source&#0045;sunoai&#0045;api" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=577408&theme=light" alt="gcui&#0045;art&#0047;suno&#0045;api&#0058;Open&#0045;source&#0032;SunoAI&#0032;API - Use&#0032;API&#0032;to&#0032;call&#0032;the&#0032;music&#0032;generation&#0032;AI&#0032;of&#0032;suno&#0046;ai&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
@@ -18,50 +19,49 @@
 
 ![suno-api banner](https://github.com/gcui-art/suno-api/blob/main/public/suno-banner.png)
 
-## Introduction
+## 简介
 
-Suno.ai v3 is an amazing AI music service. Although the official API is not yet available, we couldn't wait to integrate its capabilities somewhere.
-
-We discovered that some users have similar needs, so we decided to open-source this project, hoping you'll like it.
+Suno.ai v3 是一个令人惊叹的 AI 音乐服务，虽然官方还没有开放 API，但我们已经迫不及待的想在某些地方集成它的能力。
+我们发现有一些用户也有类似需求，于是我们将这个项目开源了，希望你们喜欢。
 
 ## Demo
 
-We have deployed an example bound to a free Suno account, so it has daily usage limits, but you can see how it runs:
+我们部署了一个示例，绑定了一个免费的 suno 账号，所以它每天有使用限制，但你可以看到它运行起来的样子：
 [suno.gcui.art](https://suno.gcui.art)
 
 ## Features
 
-- Perfectly implements the creation API from app.suno.ai
-- Automatically keep the account active.
-- Compatible with the format of OpenAI’s `/v1/chat/completions` API.
-- Supports Custom Mode
-- One-click deployment to Vercel
-- In addition to the standard API, it also adapts to the API Schema of Agent platforms like GPTs and Coze, so you can use it as a tool/plugin/Action for LLMs and integrate it into any AI Agent.
-- Permissive open-source license, allowing you to freely integrate and modify.
+- 完美的实现了 app.suno.ai 中的大部分 API
+- 自动保持账号活跃
+- 兼容OpenAI的 `/v1/chat/completions` API 格式
+- 支持 Custom Mode
+- 一键部署到 vercel
+- 除了标准 API，还适配了 GPTs、coze 等 Agent 平台的 API Schema，所以你可以把它当做一个 LLM 的工具/插件/Action，集成到任意 AI Agent 中。
+- 宽松的开源协议，你可以随意的集成和修改。
 
-## Getting Started
+## 如何开始使用？
 
-### 1. Obtain the cookie of your app.suno.ai account
+### 1. 获取你的 app.suno.ai 账号的 cookie
 
-1. Head over to [app.suno.ai](https://app.suno.ai) using your browser.
-2. Open up the browser console: hit `F12` or access the `Developer Tools`.
-3. Navigate to the `Network tab`.
-4. Give the page a quick refresh.
-5. Identify the request that includes the keyword `client?_clerk_js_version`.
-6. Click on it and switch over to the `Header` tab.
-7. Locate the `Cookie` section, hover your mouse over it, and copy the value of the Cookie.
+1. 浏览器访问 [app.suno.ai](https://app.suno.ai)
+2. 打开浏览器的控制台：按下 `F12` 或者`开发者工具`
+3. 选择`网络`标签
+4. 刷新页面
+5. 找到包含`client?_clerk_js_version`关键词的请求
+6. 点击并切换到 `Header` 标签
+7. 找到 `Cookie` 部分，鼠标复制 Cookie 的值
 
-![get cookie](https://github.com/gcui-art/suno-api/blob/main/public/get-cookie-demo.gif)
+![获取cookie](https://github.com/gcui-art/suno-api/blob/main/public/get-cookie-demo.gif)
 
-### 2. Clone and deploy this project
+### 2. 克隆并部署本项目
 
-You can choose your preferred deployment method:
+你可以选择自己喜欢的部署方式：
 
-#### Deploy to Vercel
+#### 部署到 Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgcui-art%2Fsuno-api&env=SUNO_COOKIE&project-name=suno-api&repository-name=suno-api)
+[![部署到 Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgcui-art%2Fsuno-api&env=SUNO_COOKIE&project-name=suno-api&repository-name=suno-api)
 
-#### Run locally
+#### 本地运行
 
 ```bash
 git clone https://github.com/gcui-art/suno-api.git
@@ -69,66 +69,63 @@ cd suno-api
 npm install
 ```
 
-Alternatively, you can use [Docker Compose](https://docs.docker.com/compose/)
+或者，你也可以使用 [Docker Compose](https://docs.docker.com/compose/)
 
 ```bash
 docker compose build && docker compose up
 ```
 
-### 3. Configure suno-api
+### 3. 配置 suno-api
 
-- If deployed to Vercel, please add an environment variable `SUNO_COOKIE` in the Vercel dashboard, with the value of the cookie obtained in the first step.
-
-- If you’re running this locally, be sure to add the following to your `.env` file:
+- 如果部署到了 Vercel，请在 Vercel 后台，添加环境变量 `SUNO_COOKIE`，值为第一步获取的 cookie。
+- 如果在本地运行，请在 .env 文件中添加：
 
 ```bash
 SUNO_COOKIE=<your-cookie>
 ```
 
-### 4. Run suno api
+### 4. 运行 suno api
 
-- If you’ve deployed to Vercel:
-  - Please click on Deploy in the Vercel dashboard and wait for the deployment to be successful.
-  - Visit the `https://<vercel-assigned-domain>/api/get_limit` API for testing.
-- If running locally:
-  - Run `npm run dev`.
-  - Visit the `http://localhost:3000/api/get_limit` API for testing.
-- If the following result is returned:
+- 如果部署到了 Vercel：
+  - 请在 Vercel 后台，点击 `Deploy`，等待部署成功。
+  - 访问 `https://<vercel分配的域名>/api/get_limit` API 进行测试
+- 如果在本地运行：
+  - 请运行 `npm run dev`
+  - 访问 `http://localhost:3000/api/get_limit` API 进行测试
+- 如果返回以下结果：
 
 ```json
 {
-  "credits_left": 50,
-  "period": "day",
-  "monthly_limit": 50,
-  "monthly_usage": 50
+  "credits_left": 0,
+  "period": "string",
+  "monthly_limit": 0,
+  "monthly_usage": 0
 }
 ```
 
-it means the program is running normally.
+则已经正常运行。
 
-### 5. Use Suno API
+### 5. 使用 Suno API
 
-You can check out the detailed API documentation at :
-[suno.gcui.art/docs](https://suno.gcui.art/docs)
+你可以在 [suno.gcui.art](https://suno.gcui.art/docs)查看详细的 API 文档，并在线测试。
 
-## API Reference
+## API 说明
 
-Suno API currently mainly implements the following APIs:
+Suno API 目前主要实现了以下 API:
 
 ```bash
-- `/api/generate`: Generate music
-- `/v1/chat/completions`: Generate music - Call the generate API in a format that works with OpenAI’s API.
-- `/api/custom_generate`: Generate music (Custom Mode, support setting lyrics, music style, title, etc.)
-- `/api/generate_lyrics`: Generate lyrics based on prompt
-- `/api/get`: Get music information based on the id. Use “,” to separate multiple ids.
-    If no IDs are provided, all music will be returned.
-- `/api/get_limit`: Get quota Info
+- `/api/generate`: 创建音乐
+- `/v1/chat/completions`: 创建音乐 - 用OpenAI API 兼容的格式调用 generate API
+- `/api/custom_generate`: 创建音乐（自定义模式，支持设置歌词、音乐风格、设置标题等）
+- `/api/generate_lyrics`: 根据Prompt创建歌词
+- `/api/get`: 根据id获取音乐信息。获取多个请用","分隔，不传ids则返回所有音乐
+- `/api/get_limit`: 获取配额信息
 ```
 
-For more detailed documentation, please check out the demo site:
+详细文档请查看演示站点:
 [suno.gcui.art/docs](https://suno.gcui.art/docs)
 
-## API Integration Code Example
+## API 集成代码示例
 
 ### Python
 
@@ -247,40 +244,40 @@ async function main() {
 main();
 ```
 
-## Integration with Custom Agents
+## 集成到到常见的自定义 Agent 中
 
-You can integrate Suno AI as a tool/plugin/action into your AI agent.
+你可以把 suno ai 当做一个 工具/插件/Action 集成到你的 AI Agent 中。
 
-### Integration with GPTs
-
-[coming soon...]
-
-### Integration with Coze
+### 集成到 GPTs
 
 [coming soon...]
 
-### Integration with LangChain
+### 集成到 coze
 
 [coming soon...]
 
-## Contribution Guidelines
+### 集成到 LangChain
 
-Fork the project and submit a pull request.
+[coming soon...]
 
-## License
+## 贡献指南
 
-LGPL-3.0 or later
+Fork 项目并提交 PR 即可。
 
-## Contact Us
+## 许可证
 
-- Contact us: <support@gcui.art>
+LGPL-3.0 或更高版本
 
-## Related Links
+## 联系方式
 
-- Project repository: [github.com/gcui-art/suno-api](https://github.com/gcui-art/suno-api)
-- Suno.ai official website: [suno.ai](https://suno.ai)
-- Demo: [suno.gcui.art](https://suno.gcui.art)
+- 联系我们：<support@gcui.art>
 
-## Statement
+## 相关链接
 
-suno-api is an unofficial open source project, intended for learning and research purposes only.
+- 项目仓库: [github.com/gcui-art/suno-api](https://github.com/gcui-art/suno-api)
+- Suno.ai 官网: [suno.ai](https://suno.ai)
+- 演示站点: [suno.gcui.art](https://suno.gcui.art)
+
+## 声明
+
+suno-api 是一个非官方的开源项目，仅供学习和研究使用。
